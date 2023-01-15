@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     public float xRange = 15.0f;
 
+    public GameObject projectilePrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +32,11 @@ public class PlayerController : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         _player.transform.Translate(Vector3.right * horizontalInput * playerSpeed * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Space) )
+        {
+            // Lunch a projectile form the player
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
     }
 }
