@@ -18,12 +18,15 @@ public class DetectCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        turning(other.transform);
         Destroy(gameObject);
-        turning(other.gameObject);
     }
 
-    void turning(Object @object)
+    void turning(Transform otherObject)
     {
-        transform.Rotate(0, 0, 0, Space.Self);
+        Debug.Log(otherObject.gameObject.name);
+        Debug.Log("RunThis");
+        //otherObject.eulerAngles = Vector3.zero;  
+        otherObject.Rotate(0, 180, 0, Space.World);
     }
 }
