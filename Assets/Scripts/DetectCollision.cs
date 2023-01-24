@@ -23,8 +23,4 @@ public class DetectCollision : MonoBehaviour
         AnimalHungry.feedCheck = true;
     }
 
-    //void turning(Transform @Object)
-    //{
-    //    @Object.Rotate(0, 180, 0, Space.World);
-    //}
 }
