@@ -18,8 +18,8 @@ public class MoveForward : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        speed = 50f;
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    speed = 50f;
+    //}
 }
