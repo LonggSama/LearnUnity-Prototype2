@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
         if (overCheck == true && overCount == 1)
         {
             Debug.Log("Game Over!");
+            UnityEditor.EditorApplication.ExitPlaymode();
         }
     }
 }

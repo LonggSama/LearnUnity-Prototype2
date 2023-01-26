@@ -20,7 +20,6 @@ public class DetectCollision : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        AnimalHungry.feedCheck = true;
     }
 
 }

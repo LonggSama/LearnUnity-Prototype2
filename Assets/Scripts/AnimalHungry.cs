@@ -7,7 +7,7 @@ public class AnimalHungry : MonoBehaviour
     public int maxHungry = 3;
     public int currentHungry;
     public HungryBar hungryBar;
-    static public bool feedCheck = false;
+    private bool feedCheck = false;
     //public GameObject gameObject;
 
     // Start is called before the first frame update
@@ -36,5 +36,10 @@ public class AnimalHungry : MonoBehaviour
             Destroy(this.gameObject);
             GameManager.scoreCheck = true;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        feedCheck = true;
     }
 }
